@@ -13,7 +13,7 @@ class Solution {
         // 2. 각 참가자 이름 저장
         // 이름이 이미 존재하면 그 등장 횟수 1 증가시킴
         for (String player : participant) {
-            // getOrDefault는 해당 키가 존재하면 그 값을 반환하고, 없으면 기본값 0을 반환
+            // getOrDefault는 해당 키가 존재하면 1을 반환하고, 없으면 기본값 0을 반환
             hm.put(player, hm.getOrDefault(player, 0) + 1);
             // {"leo": 1, "kiki": 1, "eden": 1}
         }
