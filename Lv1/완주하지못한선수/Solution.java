@@ -1,5 +1,6 @@
 // https://school.programmers.co.kr/learn/courses/30/lessons/42576
 package Lv1.완주하지못한선수;
+// reveiw : 1
 
 import java.util.*;
 
@@ -20,10 +21,12 @@ class Solution {
 
         // 3. 완주한 선수 이름 순회하며 그 등장 횟수 1 감소시킴
         for (String player : completion) {
+            // .get()은 해당 key가 존재하지 않으면 null을 반환
             hm.put(player, hm.get(player) - 1);
             // {"leo": 1, "kiki": 0, "eden": 0}
         }
 
+        // 값 출력  keySet() , get()
         // 4. 완주하지 못한 선수 찾기
         for (String key : hm.keySet()) {
             if(hm.get(key) != 0) {
