@@ -1,4 +1,5 @@
 // https://school.programmers.co.kr/learn/courses/30/lessons/42577
+// review : 1
 package Lv2.전화번호목록;
 
 import java.util.*;
@@ -25,7 +26,6 @@ class Solution {
                 // j = 0 --> 접두어 "" --> 접두어 존재 x
                 // j = 1 --> 접두어 "1" --> 접두어 존재 x
                 // j = 2 --> 접두어 "11" --> 접두어 존재 x
-                // j = 3 --> 접두어 "119" --> 접두어 존재 o
             }
         }
         return true;
