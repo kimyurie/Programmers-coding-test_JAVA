@@ -1,5 +1,6 @@
 // https://school.programmers.co.kr/learn/courses/30/lessons/87946
 package Lv2.피로도;
+// review : 1
 
 import java.util.*;
 
