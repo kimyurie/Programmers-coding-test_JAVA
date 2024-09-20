@@ -1,5 +1,6 @@
 //https://school.programmers.co.kr/learn/courses/30/lessons/42839
 package Lv2.소수찾기;
+// review : 1
 
 import java.util.*;
 
@@ -22,9 +23,6 @@ class Solution {
         for (int i = 0; i < others.length(); i++) {
             // comb에 others의 i번째 문자를 추가
             // others의 i번째 문자를 제외한 나머지 문자로 재귀 호출
-            // 예시 1: i = 0, comb = "1", others = "23"
-            // 예시 2: i = 1, comb = "2", others = "13"
-            // 예시 3: i = 2, comb = "3", others = "12"
             recursive(
                     comb + others.charAt(i), // comb에 others의 i번째 문자를 추가
                     // i번째 문자를 제외한 나머지 문자열로 재귀 호출
@@ -61,7 +59,7 @@ class Solution {
     // 최종 소수 개수 반환
     public int solution(String numbers) {
 
-        // 숫자 조합 만듬
+        // 아래 ""부분에 숫자 조합 만듬
         recursive("", numbers);
 
         // 소수 개수셈
