@@ -1,5 +1,6 @@
 // https://school.programmers.co.kr/learn/courses/30/lessons/42746
 package Lv2.가장큰수;
+// review : 1
 
 import java.util.*;
 
@@ -15,8 +16,12 @@ class Solution {
         }
 
         // 두 문자열을 이어 붙였을 때 더 큰값이 앞에 오도록 정렬
-        // ex) "6"과 "10"이 있을 때, "610"과 "106"을 비교하여
-        // "610"이 더 크므로 "6"이 "10"보다 앞에 옴
+        // ex)
+        // a = "6", b = "10"일 때:
+        // b + a = "106"
+        // a + b = "610"
+        // compareTo 메서드는 "106"이 "610"보다 작으므로 음수를 반환
+        // 따라서 "6"이 "10"보다 앞에 배치됩니다.
         Arrays.sort(arr, (a,b) -> (b + a).compareTo(a + b));
         // ["6", "2", "10"]
 
