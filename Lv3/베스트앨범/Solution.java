@@ -1,5 +1,6 @@
 // https://school.programmers.co.kr/learn/courses/30/lessons/42579
 package Lv3.베스트앨범;
+// review : 1
 
 import java.util.*;
 
@@ -7,24 +8,25 @@ class Solution {
     public int[] solution(String[] genres, int[] plays) {
         ArrayList<Integer> answer = new ArrayList<>();
 
-        // 장르별 총 재생 횟수 저장
+        // 장르 : 재생횟수 형태로 저장
         HashMap<String, Integer> num = new HashMap<>();
 
-        // 장르에 속한 노래와 재생횟수를 저장
+        // 장르 : 고유번호 : 재생횟수 형태로 저장
         HashMap<String, HashMap<Integer, Integer>> music = new HashMap<>();
 
-        // 1. 각 장르별로 재생 횟수 합산, 각 노래 고유번호와 재생 횟수 저장
+        // 1. 각 장르별로 재생 횟수 합산,
+        // 각 고유번호 : 재생 횟수 저장
         for (int i = 0; i < plays.length; i++) {
             // 해당 장르가 처음 등장하는 경우
             if(!num.containsKey(genres[i])) {
+                // 장르의 총 재생 횟수
+                // {'classic' : 1450}
+                num.put(genres[i], plays[i]);
+
                 // 노래 고유 번호와 재생 횟수 저장
                 HashMap<Integer, Integer> map = new HashMap<>();
                 map.put(i, plays[i]);
                 // {0: 500, 1:600, 2:150, 3: ...}
-
-                // 장르의 총 재생 횟수
-                // {'classic' : 1450}
-                num.put(genres[i], plays[i]);
 
                 // 장르별 노래 정보 저장
                 //  'classic': {0: 500, 2: 150, 3: 800}
@@ -43,10 +45,11 @@ class Solution {
         List<String> keySet = new ArrayList<>(num.keySet());
         // 총 재생 횟수(num의 값) 기준으로 정렬
         Collections.sort(keySet, (a, b) -> num.get(b) - num.get(a));
+        // {'pop': 3100, 'classic' : 1450}
 
         // 3. 장르별 가장 많이 재생된 노래 2개까지 선택
         for (String key : keySet) {
-            // 현재 장르에 속한 노래 목록 가져옴
+            // 현재 장르에 속한 고유번호 : 재생수
             HashMap<Integer, Integer> map = music.get(key);
             // key가 "classic"인 경우, music.get("classic")은
             // "classic" 장르에 속한 노래들의 정보
