@@ -1,4 +1,5 @@
 package Lv1.같은숫자는싫어;
+// review : 1
 
 import java.util.*;
 
