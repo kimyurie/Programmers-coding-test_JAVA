@@ -1,5 +1,5 @@
 package Lv2.주식가격;
-
+// review : 1(o 스택으로 안품)
 import java.util.*;
 
 class Solution {
@@ -38,3 +38,34 @@ class Solution {
         return answer;
     }
 }
+
+
+
+
+
+// m2)
+//class Solution {
+//    public int[] solution(int[] prices) {
+//        Stack<Integer> stack = new Stack<>();
+//
+//        for(int i = 0; i < prices.length; i++) {
+//            int count = 0;
+//            // prices[0] < prices[1]   count++;
+//            // prices[0] < prices[2]   count++;
+//            // prices[0] < prices[3]   count++;
+//            for(int j = i+1; j < prices.length; j++) {
+//                if(prices[i] <= prices[j]) {
+//                    count++;
+//                }else{
+//                    count++;
+//                    break;
+//                }
+//            }
+//            stack.add(count);
+//        }
+//        return stack.stream().mapToInt(i->i).toArray();
+//    }
+//}
+
+
+
