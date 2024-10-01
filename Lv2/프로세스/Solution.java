@@ -1,9 +1,13 @@
 package Lv2.프로세스;
-
+// review : 1
 import java.util.*;
+
+// 풀이방법
+// : 큐 제일 앞에 위치한 우선순위와 priorities에 담긴 우선순위를 비교하고, 일치하는게 있다면 poll()을 통해 제거해주고 answer을 증가시킴
 
 class Solution {
     public int solution(int[] priorities, int location) {
+        // 우선순위 큐 : 순서와 상관없이 우선순위가 높은 데이터가 먼저 나가는 구조
         // 우선순위 큐 선언(내림차순 버전)
         // 높은 숫자가 우선되게 하려면 () 안에 Collections.reverseOrder() 작성
         PriorityQueue<Integer> queue = new PriorityQueue<>(Collections.reverseOrder());
