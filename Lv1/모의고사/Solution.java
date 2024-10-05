@@ -1,6 +1,6 @@
 // https://school.programmers.co.kr/learn/courses/30/lessons/42840
 package Lv1.모의고사;
-
+// review : 1
 import java.util.*;
 
 class Solution {
