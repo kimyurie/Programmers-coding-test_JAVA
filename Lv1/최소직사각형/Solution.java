@@ -1,6 +1,6 @@
 // https://school.programmers.co.kr/learn/courses/30/lessons/86491
 package Lv1.최소직사각형;
-
+// review : 1(o)
 import java.util.*;
 
 class Solution {
@@ -27,3 +27,41 @@ class Solution {
 
     }
 }
+
+
+
+
+// m2)
+//class Solution {
+//    public int solution(int[][] sizes) {
+//        int answer = 1;
+//
+//        for (int i = 0; i < sizes.length; i++) {
+//            if(sizes[i][0] < sizes[i][1]){
+//                int tmp = sizes[i][0];
+//                sizes[i][0] = sizes[i][1];
+//                sizes[i][1] = tmp;
+//            }
+//
+//            // [[60, 50], [70, 30], [60, 30], [80, 40]]
+//        }
+//
+//        // 배열 요소중 최댓값, 최소값 찾기
+//        int maxW = sizes[0][0]; // 60
+//        int maxH = sizes[0][1]; // 50
+//
+//        for(int i = 1; i < sizes.length; i++) {
+//            if(sizes[i][0] > maxW) {
+//                maxW = sizes[i][0];
+//            }
+//
+//            if(sizes[i][1] > maxH) {
+//                maxH = sizes[i][1];
+//            }
+//        }
+//
+//        answer = maxW * maxH;
+//
+//        return answer;
+//    }
+//}
