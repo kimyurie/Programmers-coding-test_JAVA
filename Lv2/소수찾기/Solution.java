@@ -1,6 +1,6 @@
 //https://school.programmers.co.kr/learn/courses/30/lessons/42839
 package Lv2.소수찾기;
-// review : 1
+// review : 1 / 2
 
 import java.util.*;
 
@@ -15,6 +15,7 @@ class Solution {
         if (!comb.equals("")) {
             numbersSet.add(Integer.valueOf(comb));
         }
+
         // others 문자열에서 하나씩 문자를 선택해서 comb에 추가하고
         // 남은 문자들로 새로운 조합을 재귀적으로 생성
         // 예시: others = "123"일 때
