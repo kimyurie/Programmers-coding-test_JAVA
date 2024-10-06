@@ -1,6 +1,6 @@
 // https://school.programmers.co.kr/learn/courses/30/lessons/42842
 package Lv2.카펫;
-// review : 1
+// review : 1 / 2
 
 import java.util.*;
 
@@ -31,3 +31,45 @@ class Solution {
         return new int[0];
     }
 }
+
+
+
+// m2)
+//class Solution {
+//    public int[] solution(int brown, int yellow) {
+//        int[] answer = new int[2];
+//        int size = brown + yellow; // 전체 넓이 12
+//
+//        // 약수값 저장할 배열
+//        List<Integer> as = new ArrayList<>();
+//
+//        for(int i = 1; i <= size; i++) {
+//            if(size % i == 0) {
+//                // as[1,2,3,4,6,12]
+//                // as[1,3,9]
+//                as.add(i);
+//            }
+//        }
+//
+//        // 약수 쌍 중에서 brown과 yellow 조건을 만족하는 지 확인
+//        for (int i = 0; i < as.size(); i++) {
+//            int height = as.get(i);
+//            int width = size / height;
+//
+//            if(width >= height) {
+//                // 테두리 = (4+3) * 2 - 4
+//                int border = (width + height) * 2 - 4;
+//                int inner = size - border;
+//
+//                if(border == brown && inner == yellow) {
+//                    answer[0] = width;
+//                    answer[1] = height;
+//                    break;
+//                }
+//            }
+//
+//        }
+//
+//        return answer;
+//    }
+//}
