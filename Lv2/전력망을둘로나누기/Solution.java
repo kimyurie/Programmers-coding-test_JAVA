@@ -1,6 +1,6 @@
 // https://school.programmers.co.kr/learn/courses/30/lessons/86971
 package Lv2.전력망을둘로나누기;
-
+// review : 1
 import java.util.*;
 
 class Solution {
@@ -52,17 +52,17 @@ class Solution {
             int v1 = wires[i][0];
             int v2 = wires[i][1];
 
-            boolean[] visited = new boolean[n+1];
-
             // 전선을 끊음
             graph[v1].remove(Integer.valueOf(v2));
             graph[v2].remove(Integer.valueOf(v1));
 
+            boolean[] visited = new boolean[n+1];
+
             // DFS로 한 전력망의 송전탑 개수 세기
             int cnt = dfs(1, visited);
 
-            // 다른 전력망의 송전탑 개수는 n - cnt
-            // Math.abs : 절댓값 구함
+            // 두 송전탑 개수 차이 구하기(다른 전력망의 송전탑 개수는 n - cnt)
+            // Math.abs : 절댓값 구함 (음수 나올 수도 있으므로)
             int diff = Math.abs(cnt - (n - cnt));
             min = Math.min(min, diff);
 
