@@ -1,5 +1,11 @@
 // https://school.programmers.co.kr/learn/courses/30/lessons/43162
 package Lv3.네트워크;
+// review : 1 
+
+// 문제이해
+// computers[0][0] = 1
+// computers[0][1] = 1  --> 0번과 1번 컴퓨터 연결 o
+// computers[0][2] = 0  --> 0번과 2번 컴퓨터 연결 x
 
 class Solution {
     // 한 컴퓨터에서 DFS 탐색을 시작하면, 그 컴퓨터와 연결된 모든 컴퓨터를 방문
@@ -12,7 +18,6 @@ class Solution {
             if (!visited[i] && computers[node][i] == 1) {
                 dfs(i, visited, computers);
             }
-
             // computers[0][0] == 1은 이미 방문 상태이므로 재귀 호출x
             // computers[0][1] == 1)은 방문되지 않았고,
             //                       컴퓨터 0과 연결되어 있으므로 재귀 호출
