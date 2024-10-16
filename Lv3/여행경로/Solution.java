@@ -1,6 +1,6 @@
 // https://school.programmers.co.kr/learn/courses/30/lessons/43164
 package Lv3.여행경로;
-
+// review : 1
 import java.util.*;
 
 class Solution {
@@ -36,9 +36,10 @@ class Solution {
         // DFS 탐색 시작: 초기 상태는 "ICN" 공항에서 출발하고, 경로도 "ICN"으로 시작
         dfs(0, "ICN", "ICN", tickets);
         // list에 저장된 경로들 알파벳 순으로 정렬
+        // 알파벳 순서로 정렬하는 것은 ICN에서 출발한 후 나머지 공항들에 대한 순서를 의미
+        // 즉, 경로 중간에 등장하는 공항들이 알파벳 순서로 가장 앞서는 경로를 찾는 것
         Collections.sort(list);
         // 가장 알파벳 순서 앞서는 경로 선택해서 공백 기준으로 나눈 후 리턴
         return list.get(0).split(" ");
-
     }
 }
