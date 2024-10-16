@@ -1,6 +1,6 @@
 // https://school.programmers.co.kr/learn/courses/30/lessons/43163
 package Lv3.단어변환;
-
+// review : 1
 class Solution {
     // 각 단어가 변환과정에서 사용되었는지 여부 판단
     static boolean[] visited;
@@ -16,11 +16,13 @@ class Solution {
         }
 
         for(int i = 0; i < words.length; i++) {
+            // 이미 방문한 단어는 visited[i]가 true이므로 이를 건너뛰고 다음 단어로 넘어감
             if(visited[i]) {
                 continue;
             }
 
-            int k = 0; // 현재 단어(begin)와 words[i]가 몇글자가 같은지 체크
+            // 현재 단어(begin)와 words[i]가 몇글자가 같은지 체크
+            int k = 0;
             for (int j = 0; j < begin.length(); j++) {
                 if(begin.charAt(j) == words[i].charAt(j)) {
                     k++;
@@ -38,6 +40,8 @@ class Solution {
 // 이미 방문한 단어들을 다시 탐색할 수 있도록 방문 표시를 해제해야 함
             }
         }
+
+
     }
 
     public int solution(String begin, String target, String[] words) {
