@@ -1,6 +1,6 @@
 // https://school.programmers.co.kr/learn/courses/30/lessons/43162
 package Lv3.네트워크;
-// review : 1 
+// review : 1
 
 // 문제이해
 // computers[0][0] = 1
