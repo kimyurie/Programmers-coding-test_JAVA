@@ -1,5 +1,5 @@
 // https://school.programmers.co.kr/learn/courses/30/lessons/12933?language=java
-package Lv1.정수내림차순으로배치하;
+package Lv1.정수내림차순으로배치하기;
 
 import java.util.*;
 
@@ -15,7 +15,6 @@ class Solution {
         for(int i = 0; i < str.length; i++) {
             s += str[i];
         }
-
         return Long.parseLong(s);
 
     }
